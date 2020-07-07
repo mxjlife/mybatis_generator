@@ -5,12 +5,12 @@
     <resultMap id="BaseResultMap" type="${basicInfo.packagePath}.entity.${basicInfo.objectName}PO">
     <#list tableInfo.columns as ci>
     <#if ci.primaryKey>
-        <id column="${ci.column}" property="${ci.property}" " />
+        <id column="${ci.column}" property="${ci.property}" />
     </#if>
     </#list>
     <#list tableInfo.columns as ci>
     <#if !ci.primaryKey>
-        <result column="${ci.column}" property="${ci.property}" jdbcType="${ci.jdbcType}" />
+        <result column="${ci.column}" property="${ci.property}" />
     </#if>
     </#list>
     </resultMap>
